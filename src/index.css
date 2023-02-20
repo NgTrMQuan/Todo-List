@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(12, 236, 206);
+  background-image: url(/garrett-parker-DlkF4-dbCOU-unsplash.jpg);
+  height: 100%;
+  background-size: cover;
+  background-repeat: none;
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+}
+*{
+  box-sizing: border-box;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+h1{
+  text-align: center;
+  color: #00fff2;
+}
+.cleanup{
+  margin-left: 10px;
+  background-color: none;
+  color:white;
+}
+.todo{
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto;
+  max-width: 350px;
+  min-height: 400px;
+  padding: 20px;
+  background-color: none;
+  color: rgb(10, 136, 123);
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4);
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: relative;
+  top: 20px;
+}
+.todo-item{
+  display: flex;
+  justify-content: flex-start;
+  background-color: none;
+}
+form{
+  display: flex;
+  width: 100%;
+  margin: 20px auto;
+  justify-content: space-between;
+}  
+form input{
+  background-color: #ffffff;
+  max-width: 400px;
+  height: 40px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgb(12, 236, 206);
+  padding-right: 70px;
+}
+form input:focus {
+  background-color: #ffffff;
+  outline-color: rgb(0, 255, 255);
+  box-shadow: -3px -3px 15px rgb(0, 255, 255);
+  transition: .1s;
+  transition-property: box-shadow;
+}
+::placeholder{
+  font-size: 15px;
+  color: #888;
+  letter-spacing: 0.2;
+}
+button {
+  position: relative;
+  outline: none;
+  border: 1px solid #303030;
+  background: rgb(12, 236, 206);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+ }
+ 
+ button:hover {
+  box-shadow: 0 0 10px #00e1ff, 0 0 25px #00a6ff, 0 0 50px #00fff2;
+  transition-delay: 0.6s;
+ }
+ 
+ button span {
+  position: absolute;
+ }
+ 
+ button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ae00ff);
+ }
+ 
+ button:hover span:nth-child(1) {
+  left: 100%;
+  transition: 0.7s;
+ }
+ 
+ button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #001eff);
+ }
+ 
+ button:hover span:nth-child(3) {
+  right: 100%;
+  transition: 0.7s;
+  transition-delay: 0.35s;
+ }
+ 
+ button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ae00ff);
+ }
+ 
+ button:hover span:nth-child(2) {
+  top: 100%;
+  transition: 0.7s;
+  transition-delay: 0.17s;
+ }
+ 
+ button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #001eff);
+ }
+ 
+ button:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.7s;
+  transition-delay: 0.52s;
+ }
+ 
+ button:active {
+  background: #ae00af;
+  background: linear-gradient(to top right, #ae00af, #001eff);
+  color: #bfbfbf;
+  box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+  transition: 0.1s;
+ }
+ 
+ button:active span:nth-child(1) 
+ span:nth-child(2) 
+ span:nth-child(2) 
+ span:nth-child(2) {
+  transition: none;
+  transition-delay: none;
+ }
+
+ @media screen and (max-width:1024px) {
+  body {
+    background-image: url(/garrett-parker-DlkF4-dbCOU-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+ }
